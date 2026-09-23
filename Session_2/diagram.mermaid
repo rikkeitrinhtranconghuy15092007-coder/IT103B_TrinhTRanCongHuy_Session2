@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> BOOKED : Khách đặt xe
+    BOOKED --> ACCEPTED : Tài xế nhận cuốc
+    BOOKED --> CANCELLED : Khách hủy
+    ACCEPTED --> IN_TRANSIT : Đã đón khách
+    ACCEPTED --> CANCELLED : Khách hoặc tài xế hủy
+    IN_TRANSIT --> COMPLETED : Trả khách thành công
+    IN_TRANSIT --> CANCELLED : Sự cố
+    COMPLETED --> [*]
+    CANCELLED --> [*]
